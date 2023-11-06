@@ -5,9 +5,9 @@ export default function Footer() {
   return (
     <footer>
       <Separator />
-      <div className="container my-5 flex items-center justify-between">
+      <div className="container my-5 flex flex-col md:flex-row items-center justify-between gap-y-5">
         <h3 className="font-medium text-2xl">Connect with Me</h3>
-        <ul className="flex flex-col md:flex-row gap-5">
+        <ul className="flex flex-row gap-5">
           <li>Discord</li>
           <li>GitHub</li>
           <li>LinkedIn</li>
