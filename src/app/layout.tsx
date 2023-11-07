@@ -10,7 +10,7 @@ import { siteConfig } from "@/constant/config";
 const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: siteConfig.title,
+  title: { default: siteConfig.title, template: `%s | ${siteConfig.title}` },
   description: siteConfig.description,
   robots: { index: true, follow: true },
   icons: {
