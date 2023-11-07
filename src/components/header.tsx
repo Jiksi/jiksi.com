@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { ModeToggle } from "@/components/theme-switcher";
@@ -7,7 +10,12 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 bg-background text-foreground">
+    <motion.header
+      className="sticky top-0 bg-background text-foreground"
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
       <nav className="container flex h-20 items-center justify-between text-base md:text-xl">
         <Link href="/">
           <div className="flex items-center">
@@ -31,6 +39,6 @@ export default function Header() {
         </ul>
       </nav>
       <Separator />
-    </header>
+    </motion.header>
   );
 }

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import {
@@ -8,6 +10,7 @@ import {
   SiFramer,
   SiPrisma,
 } from "react-icons/si";
+import { motion } from "framer-motion";
 
 import {
   Tooltip,
@@ -46,11 +49,23 @@ export default function About() {
 
   return (
     <section className="container mb-20 md:mb-40" id="about">
-      <h3 className="mb-5 text-2xl font-bold underline underline-offset-4">
+      <motion.h3
+        className="mb-5 text-2xl font-bold underline underline-offset-4"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true, amount: 0.1 }}
+      >
         About
-      </h3>
+      </motion.h3>
       <div className="flex flex-col items-center justify-between gap-y-5 md:flex-row md:items-start">
-        <div className="order-last w-full space-y-5 text-lg leading-loose md:order-first md:w-1/2 md:space-y-10 md:text-xl">
+        <motion.div
+          className="order-last w-full space-y-5 text-justify text-lg leading-loose md:order-first md:w-3/5 md:space-y-10 md:text-xl"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <p>
             H! My name is Zhicxi Azis Pramana, but you can call me Jiksi.
             I&apos;m a programmer with expertise in crafting awesome website
@@ -82,15 +97,21 @@ export default function About() {
               ))}
             </ul>
           </div>
-        </div>
-        <div className="relative -z-10 flex aspect-[4/3] h-[400px] w-[300px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white dark:border-white md:mr-20">
+        </motion.div>
+        <motion.div
+          className="relative -z-10 flex aspect-[4/3] h-[400px] w-[300px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white dark:border-white md:mr-20"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <Image
             src="/images/zhicxi.png"
             alt="profile"
             fill
             className="absolute inset-0 h-full w-full object-cover"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
