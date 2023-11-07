@@ -83,7 +83,7 @@ export default function About() {
             </ul>
           </div>
         </div>
-        <div className="relative -z-10 flex aspect-[4/3] h-[400px] w-[300px] items-center justify-center overflow-hidden rounded-2xl bg-primary md:mr-20">
+        <div className="relative -z-10 flex aspect-[4/3] h-[400px] w-[300px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white dark:border-white md:mr-20">
           <Image
             src="/images/zhicxi.png"
             alt="profile"
