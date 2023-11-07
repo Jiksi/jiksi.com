@@ -1,5 +1,5 @@
 export const siteConfig = {
-  title: "Jiksi.com",
+  title: "Jiksi",
   description: "A personal portofolio website created by Jiksi.",
   url: "https://jiksi.com",
 };
