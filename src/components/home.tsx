@@ -2,26 +2,31 @@
 
 import React from "react";
 import Image from "next/image";
-import jiksi from "/public/images/jiksi.png";
 import { motion } from "framer-motion";
+
+import jiksi from "/public/images/jiksi.png";
+
 export default function Home() {
   return (
-    <section className="min-h-main flex flex-col justify-center container">
-      <div className="flex flex-col md:flex-row items-center gap-y-5 justify-around">
+    <section
+      className="min-h-main container flex flex-col justify-center"
+      id="home"
+    >
+      <div className="flex flex-col items-center justify-around gap-y-5 md:flex-row">
         <motion.div
-          className="flex flex-col justify-center"
+          className="order-last flex flex-col justify-center md:order-first"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-extrabold text-2xl md:text-4xl">Hello World!</h2>
-          <h2 className="font-extrabold text-3xl md:text-5xl">
+          <h2 className="text-2xl font-extrabold md:text-4xl">Hello World!</h2>
+          <h2 className="text-3xl font-extrabold md:text-5xl">
             You can call me&nbsp;
-            <span className="text-primary-foreground bg-primary rounded-md pl-4 pr-5">
+            <span className="rounded-md bg-primary pl-4 pr-5 text-primary-foreground">
               Jiksi
             </span>
           </h2>
-          <div className="font-medium text-lg md:text-2xl mt-3 md:mt-5 text-muted-foreground">
+          <div className="mt-3 text-lg font-medium text-muted-foreground md:mt-5 md:text-2xl">
             <p>Building awesome website with React,</p>
             <p>Typescript, Tailwind CSS, and Framer Motion</p>
           </div>
@@ -36,7 +41,7 @@ export default function Home() {
             alt="Jiksi Open Peep Ver."
             height={400}
             width={400}
-            className="md:w-[400px] w-[200px]"
+            className="w-[200px] md:w-[400px]"
           />
         </motion.div>
       </div>
