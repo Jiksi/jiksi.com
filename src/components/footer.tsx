@@ -1,21 +1,54 @@
 import React from "react";
-import { Separator } from "./ui/separator";
+import Link from "next/link";
+
+import { Separator } from "@/components/ui/separator";
 
 export default function Footer() {
   return (
     <footer>
       <Separator />
-      <div className="container my-5 flex flex-col md:flex-row items-center justify-between gap-y-5">
-        <h3 className="font-medium text-2xl">Connect with Me</h3>
+      <div className="container my-5 flex flex-col items-center justify-between gap-y-5 md:flex-row">
+        <h3 className="text-2xl font-medium">Connect with Me</h3>
         <ul className="flex flex-row gap-5">
-          <li>Discord</li>
-          <li>GitHub</li>
-          <li>LinkedIn</li>
-          <li>Instagram</li>
-          <li>Twitter</li>
+          <li>
+            <Link
+              href="https://github.com/jiksi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://www.linkedin.com/in/zhicxi-azis-72ab5a222"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://www.instagram.com/jiksilalapo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://twitter.com/Jiksilalapo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Twitter
+            </Link>
+          </li>
         </ul>
       </div>
-      <p className="text-center mb-5">&copy;&nbsp;2022 Jiksi</p>
+      <p className="mb-5 text-center">&copy;&nbsp;Jiksi 2023</p>
     </footer>
   );
 }
