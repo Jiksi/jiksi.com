@@ -20,6 +20,7 @@ const Projects = [
     badge: ["nextjs", "nextauth", "prisma"],
     content:
       "A website for DLH PPU designed to enhance public services for the residents, streamlining and improving overall service delivery.",
+    link: "https://siplahterpadu.id",
   },
   {
     title: "Meranti Creative Lab",
@@ -28,6 +29,7 @@ const Projects = [
     badge: ["nextjs", "framer motion", "mysql"],
     content:
       "A website for Meranti Creative Lab Nusantara to showcase their works.",
+    link: "https://mcl.vercel.app",
   },
   {
     title: "Personal Portofolio Website",
@@ -35,6 +37,7 @@ const Projects = [
       "bg-[linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)),url('/images/projects/jiksi.png')]",
     badge: ["nextjs"],
     content: "My personal portfolio website.",
+    link: "https://jiksi.com",
   },
 ];
 
@@ -66,13 +69,15 @@ export default function Project() {
                   project.image,
                 )}
               >
-                <CardTitle className="text-white">{project.title}</CardTitle>
+                <CardTitle className="text-card-title">
+                  {project.title}
+                </CardTitle>
                 <ul className="flex gap-1">
                   {project.badge.map((badge, index) => (
                     <li key={index}>
                       <Badge
                         variant="outline"
-                        className="border-white text-white"
+                        className="border-card-title text-card-title"
                       >
                         {badge}
                       </Badge>
@@ -85,7 +90,7 @@ export default function Project() {
               </CardContent>
               <CardFooter>
                 <Link
-                  href="https://mcl.vercel.app/"
+                  href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline-offset-4 hover:cursor-pointer hover:underline"
