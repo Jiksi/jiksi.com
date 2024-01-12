@@ -66,11 +66,16 @@ export default function Project() {
                   project.image,
                 )}
               >
-                <CardTitle>{project.title}</CardTitle>
+                <CardTitle className="text-white">{project.title}</CardTitle>
                 <ul className="flex gap-1">
                   {project.badge.map((badge, index) => (
                     <li key={index}>
-                      <Badge variant="outline">{badge}</Badge>
+                      <Badge
+                        variant="outline"
+                        className="border-white text-white"
+                      >
+                        {badge}
+                      </Badge>
                     </li>
                   ))}
                 </ul>
