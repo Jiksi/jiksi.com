@@ -48,7 +48,9 @@ export default function Footer() {
           </li>
         </ul>
       </div>
-      <p className="mb-5 text-center">&copy;&nbsp;Jiksi 2023</p>
+      <p className="mb-5 text-center">
+        &copy;&nbsp;Jiksi {new Date().getFullYear()}
+      </p>
     </footer>
   );
 }
