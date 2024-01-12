@@ -6,7 +6,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { siteConfig } from "@/constant/config";
-import GoogleAnalytics from "@/components/google-analytics";
+import GoogleAnalytics from "@/script/analytics";
 
 const manrope = Manrope({ subsets: ["latin"] });
 
