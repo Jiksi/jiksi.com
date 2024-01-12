@@ -18,6 +18,7 @@ export function ModeToggle() {
 
   return (
     <Button
+      aria-label="Switch button"
       size="icon"
       className="overflow-hidden rounded-full"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

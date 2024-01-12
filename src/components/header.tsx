@@ -25,18 +25,18 @@ export default function Header() {
             <h1 className="font-bold">JIKSI</h1>
           </div>
         </Link>
-        <ul className="flex items-center gap-4 font-medium md:gap-10">
-          <li>
+        <div className="flex items-center gap-4 font-medium md:gap-10">
+          <div>
             <Link href="/#project">Project</Link>
-          </li>
-          <li>
+          </div>
+          <div>
             <Link href="/#about">About</Link>
-          </li>
-          <li>
+          </div>
+          <div>
             <Link href="/#contact">Contact</Link>
-          </li>
+          </div>
           <ModeToggle />
-        </ul>
+        </div>
       </nav>
       <Separator />
     </motion.header>

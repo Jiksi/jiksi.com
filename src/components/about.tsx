@@ -87,7 +87,9 @@ export default function About() {
                 <li key={index}>
                   <TooltipProvider>
                     <Tooltip>
-                      <TooltipTrigger>{tech.icon}</TooltipTrigger>
+                      <TooltipTrigger aria-label={`${tech.name} icon`}>
+                        {tech.icon}
+                      </TooltipTrigger>
                       <TooltipContent>
                         <p>{tech.name}</p>
                       </TooltipContent>
