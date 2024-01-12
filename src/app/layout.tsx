@@ -6,6 +6,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { siteConfig } from "@/constant/config";
+import GoogleAnalytics from "@/components/google-analytics";
 
 const manrope = Manrope({ subsets: ["latin"] });
 
@@ -44,6 +45,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={manrope.className}>
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+          <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        ) : null}
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
